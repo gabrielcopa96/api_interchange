@@ -14,6 +14,8 @@ const app = express();
 app.use(morgan('dev'))
 app.use(cors())
 
+app.use('/', require('./app/routes'))
+
 app.listen(process.env.PORT || 3001, () => {
     console.log(`Listening on port ${process.env.PORT}`);
 })
