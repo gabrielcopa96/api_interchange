@@ -3,16 +3,16 @@ const Schema = mongoose.Schema;
 // const Category = mongoose.model('Categorys')
 /* Creating a new schema for the messages collection. */
 const productSchema = new Schema({
-    name:{
+    name: {
         required: true,
-        type:String
-    },   
-    description:{
-        required:true,
-        type:Text
+        type: String
     },
-    id_category:{
-        type: Schema.Types.ObjectId, ref:"Categorys"
+    description: {
+        required: true,
+        type: Text
+    },
+    id_category: {
+        type: [Schema.Types.ObjectId], ref: "Categorys"
     }
 });
-module.exports = mongoose.model('Products',productSchema);
+module.exports = mongoose.model('Products', productSchema);

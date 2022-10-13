@@ -1,9 +1,9 @@
 const router = require('express').Router()
 
-const rutaUser = require('./routeUser')
+// ROUTE USERS
+router.use("/user",require('./routeUser'))
 
-
-router.use("/user", rutaUser)
-
+// ROUTE CATEGORY
+router.use('/category', require('./category.routes'))
 
 module.exports = router;
