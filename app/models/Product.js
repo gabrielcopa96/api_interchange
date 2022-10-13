@@ -18,4 +18,5 @@ const productSchema = new Schema({
         type: Schema.Types.ObjectId, ref: "Users"
     }
 });
+
 module.exports = mongoose.model('Products', productSchema);
