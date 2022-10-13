@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 /* Creating a new schema for the responses collection. */
 const responseSchema = new mongoose.Schema({
     message:{
-        type: Text
+        type: String
     },
     id_user:{
         type: Schema.Types.ObjectId, ref:"Users"

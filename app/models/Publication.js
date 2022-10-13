@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 const publicationSchema = new Schema({
     description: {
         required: true,
-        type: Text
+        type: String
     },
     refernces: {//search the type of refernces for the camp refernce
         type: String

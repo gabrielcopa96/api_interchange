@@ -4,11 +4,7 @@ const Schema = mongoose.Schema;
 /* Creating a new schema for the questions collection. */
 const questionSchema = new Schema({
     message:{
-        type:Text
-    },
-    title: {
-        type: String,
-        default: 'Question'
+        type:String
     },
     id_user:{
         type: Schema.Types.ObjectId,ref:"Users"
