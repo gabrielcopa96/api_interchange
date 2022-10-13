@@ -12,3 +12,9 @@ const questionxresponseSchema = new Schema({
 })
 
 module.exports = mongoose.model('QuestionsXResponses',questionxresponseSchema)
+
+//
+//  id_question -> QuestionXResponse -> id_question
+//  id_response -> QuestionXResponse.findOne({ id_questionxresponse }) -> id_response
+//  
+//
