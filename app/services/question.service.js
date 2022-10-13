@@ -30,7 +30,9 @@ const createNewQuestion = async (body, res) => {
         // actualizo la publication
         // await Publication.findByIdAndUpdate(id_publication, {
         //     id_questionxresponse: [...id_questionxresponse, newquestionxresponse._id]
-        // })
+        // }, { new: true })
+
+        
 
         return res.status(201).json({
             ok: true,
