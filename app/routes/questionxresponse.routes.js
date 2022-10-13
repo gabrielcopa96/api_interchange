@@ -1,8 +1,9 @@
 const router = require('express').Router()
 
-// const controller = require('../controllers/chat.controller');
+const controller = require('../controllers/questionxresponse.controller');
 
-// router
-//     .post('/', controller.createCatogories)
+ router
+     .get('/', controller.getQuestionsXResponses)
+     .get('/:id', controller.getQuestionResponse)
 
 module.exports = router
