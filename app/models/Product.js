@@ -9,10 +9,13 @@ const productSchema = new Schema({
     },
     description: {
         required: true,
-        type: Text
+        type: String
     },
     id_category: {
         type: [Schema.Types.ObjectId], ref: "Categorys"
+    },
+    id_user: {
+        type: Schema.Types.ObjectId, ref: "Users"
     }
 });
 

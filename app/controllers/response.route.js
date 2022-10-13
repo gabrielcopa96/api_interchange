@@ -1,6 +1,7 @@
 const {newResponse} = require('../services/response.service.js')
 const responseRegister = (req,res)=>{
-    newResponse(res)
+    const body = req.body
+    newResponse(body,res)
 }
 
 module.exports = {
