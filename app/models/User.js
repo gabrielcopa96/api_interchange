@@ -24,6 +24,9 @@ const userSchema = new mongoose.Schema({
         required: true,
         type:String
     },
+    publicaciones: {
+        type: [mongoose.Schema.Types.ObjectId] , ref: 'Publications'
+    },
     typeUser:{
         required:true,
         type:String,
