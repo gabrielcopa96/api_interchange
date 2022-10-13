@@ -14,8 +14,12 @@ app.use(morgan('dev'))
 app.use(cors())
 
 
-//Routes
-app.use("/user",require('./app/routes/routeUser'))
+app.use('/', require('./app/routes'))
+
+app.get('/*', (req, res) => {
+    res.sendFile(__dirname + '/static/404.html')
+})
+
 
 
 
