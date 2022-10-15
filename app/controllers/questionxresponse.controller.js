@@ -13,7 +13,6 @@ const getQuestionResponse = (req, res) => {
 
 const getQuestionXResponseForPublication = (req, res) => {
 
-    
 }
 
 module.exports = {
