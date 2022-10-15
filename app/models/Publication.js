@@ -23,7 +23,8 @@ const publicationSchema = new Schema({
         type:Schema.Types.ObjectId, ref: "Categorys"
     },
     eliminated:{
-            
+        type: Boolean,
+        default:false,
     }
 }, {
     versionKey: false
