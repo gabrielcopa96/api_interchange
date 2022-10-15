@@ -3,15 +3,14 @@ const Schema = mongoose.Schema;
 
 /* Creating a new schema for the messages collection. */
 const messageSchema = new Schema({
-    date: {
-        Type: Date, default: Date.now
-    },
-    message: {
-        Type: String
-    },
     id_user: {
         type: Schema.Types.ObjectId, ref: "Users"
+    },
+    message: {
+        type: String
     }
+}, {
+    versionKey: false
 });
 
 module.exports = mongoose.model('Messages', messageSchema);

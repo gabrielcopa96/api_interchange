@@ -8,7 +8,7 @@ const getQuestionsXResponses = (req, res) => {
 const getQuestionResponse = (req, res) => {
 
     const { id } = req.query
-    getOneQuestionXResponse(id, res)
+    return getOneQuestionXResponse(id, res)
 }
 
 const getQuestionXResponseForPublication = (req, res) => {

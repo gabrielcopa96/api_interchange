@@ -9,5 +9,7 @@ const responseSchema = new mongoose.Schema({
     id_user:{
         type: Schema.Types.ObjectId, ref:"Users"
     }
+}, {
+    versionKey: false
 });
 module.exports = mongoose.model('Responses',responseSchema);

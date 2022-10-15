@@ -2,6 +2,7 @@ const { route } = require('./publication.routes')
 
 const router = require('express').Router()
 
+
 // ROUTE USERS
 router.use("/user",require('./routeUser'))
 
@@ -22,5 +23,11 @@ router.use('/chat', require('./chat.routes'))
 
 // ROUTE PUBLICATION
 router.use('/publication', require('./publication.routes'))
+
+// ROUTE QUESTIONXRESPONSE
+router.use('/questionxresponse', require('./questionxresponse.routes'))
+
+// ROUTE MESSAGES
+router.use('/message', require('./message.routes'))
 
 module.exports = router;

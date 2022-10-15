@@ -1,5 +1,6 @@
 const Products = require('../models/Product')
-const registerProductService = async ( req,res )=>{
+
+const registerProductService = async ( req,res ) => {
    /* The above code is creating a product. */
     try {
         const productCreate = await Products.create(req.body)
@@ -14,7 +15,8 @@ const registerProductService = async ( req,res )=>{
             error: message
         })
     }
-} 
+}
+
 module.exports = {
     registerProductService
 }

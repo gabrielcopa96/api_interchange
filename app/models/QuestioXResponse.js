@@ -9,6 +9,8 @@ const questionxresponseSchema = new Schema({
     id_response:{
         type:Schema.Types.ObjectId,ref:'Responses'
     }
+}, {
+    versionKey: false
 })
 
 module.exports = mongoose.model('QuestionsXResponses',questionxresponseSchema)

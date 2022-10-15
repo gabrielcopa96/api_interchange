@@ -1,10 +1,12 @@
+const { getOneChat } = require('../services/chat.service')
 
+const getChatById = ( req, res ) => {
 
-const newChat = (req, res) => {
-
+    const { id } = req.params
+    return getOneChat( id, res )
 
 }
 
 module.exports = {
-    newChat
+    getChatById
 }

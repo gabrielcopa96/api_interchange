@@ -1,6 +1,7 @@
 const Response = require('../models/Response');
 const questionXresponse = require('../models/QuestioXResponse');
-const newResponse = async(body,res)=>{
+
+const newResponse = async( body, res ) => {
     const {message,id_user,id_questionXresponse} = body
     try {
         const createRegisterResponse = await Response.create({
@@ -20,6 +21,7 @@ const newResponse = async(body,res)=>{
     }
     
 }
+
 module.exports = {
     newResponse
 }

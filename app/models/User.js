@@ -20,6 +20,9 @@ const userSchema = new mongoose.Schema({
         minLength:5,
         maxLength:50
     },
+    chat: {
+        type: [mongoose.Schema.Types.ObjectId], ref: 'Chats'
+    },
     username:{
         required: true,
         type:String
@@ -35,5 +38,8 @@ const userSchema = new mongoose.Schema({
             message:'{VALUE} is not supported'
         }
     }
+}, {
+    versionKey: false
 })
+
 module.exports = mongoose.model('Users',userSchema);

@@ -3,10 +3,7 @@ const Schema = mongoose.Schema;
 
 /* Creating a schema for the publications collection. */
 const publicationSchema = new Schema({
-    // description: {
-    //     required: true,
-    //     type: String
-    // },
+
     refernces: {//search the type of refernces for the camp refernce
         type: String
     },
@@ -25,5 +22,7 @@ const publicationSchema = new Schema({
     id_categoria: {
         type:Schema.Types.ObjectId, ref: "Categorys"
     }
+}, {
+    versionKey: false
 });
 module.exports = mongoose.model("Publications", publicationSchema);

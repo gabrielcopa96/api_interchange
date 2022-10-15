@@ -6,6 +6,8 @@ const chatSchema = new Schema({
     id_message: {
         type: [Schema.Types.ObjectId], ref: "Messages"
     }
+}, {
+    versionKey: false
 });
 
 module.exports = mongoose.model("Chats", chatSchema);
