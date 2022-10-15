@@ -1,5 +1,3 @@
-const { route } = require('./publication.routes')
-
 const router = require('express').Router()
 
 
@@ -29,5 +27,8 @@ router.use('/questionxresponse', require('./questionxresponse.routes'))
 
 // ROUTE MESSAGES
 router.use('/message', require('./message.routes'))
+
+// ROUTE EXCHANGE
+router.use('/exchange', require('./exchange.routes'))
 
 module.exports = router;

@@ -2,6 +2,7 @@ const express = require('express');
 
 const morgan = require('morgan');
 const cors = require('cors');
+const path = require('path');
 
 const http = require('http');
 
@@ -20,9 +21,14 @@ app.use(cors())
 
 app.use('/', require('./app/routes'))
 
+app.use(express.static(path.join(__dirname, './static')))
+
 app.get('/*', (req, res) => {
-    res.sendFile(__dirname + '/static/404.html')
+    res.sendFile(__dirname + '/static/error404.html')
 })
+
+
+
 
 
 

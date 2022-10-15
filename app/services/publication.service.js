@@ -37,6 +37,7 @@ const selectAllOrCategory = async (req, res) => {
             const searchCategory = await Category.findOne({
                 name: category
             })
+
             const filterPublicationBy = await Publications.find({
                 id_categoria: searchCategory._id
             }).exec()

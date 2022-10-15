@@ -30,6 +30,9 @@ const userSchema = new mongoose.Schema({
     publicaciones: {
         type: [mongoose.Schema.Types.ObjectId], ref: 'Publications'
     },
+    exchange: {
+        type: [mongoose.Schema.Types.ObjectId], ref: 'Exchanges'
+    },
     typeUser: {
         required: true,
         type: String,
