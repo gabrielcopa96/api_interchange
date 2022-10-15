@@ -7,7 +7,7 @@ const publicationSchema = new Schema({
         required: true,
         type: String
     },
-    refernces: {//search the type of refernces for the camp refernce
+    references: {//search the type of refernces for the camp refernce
         type: String
     },
     state: {

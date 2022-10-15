@@ -1,12 +1,9 @@
 const {Router} = require('express');
 const router = Router();
-const {responseRegister} = require('../controllers/response.route')
+const { responseRegister } = require('../controllers/response.route')
 
 
-    router.get("/", responseRegister)
+    router
+        .post("/", responseRegister)
 
 module.exports = router;
-
-
-
-

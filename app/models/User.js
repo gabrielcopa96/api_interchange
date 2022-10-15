@@ -20,6 +20,9 @@ const userSchema = new mongoose.Schema({
         minLength:5,
         maxLength:50
     },
+    chat: {
+        type: [mongoose.Schema.Types.ObjectId], ref: 'Chats'
+    },
     username:{
         required: true,
         type:String

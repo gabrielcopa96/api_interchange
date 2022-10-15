@@ -10,8 +10,6 @@ const createNewQuestion = async (body, res) => {
     //     id_publicacion: 'df324tfdg3gdfg'
     // }
 
-
-    console.log(body)
     const { message, id_user, questionxresponse } = body
 
     try {

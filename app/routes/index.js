@@ -1,5 +1,6 @@
 const router = require('express').Router()
 
+
 // ROUTE USERS
 router.use("/user",require('./routeUser'))
 
@@ -17,5 +18,11 @@ router.use('/question', require('./question.routes'))
 
 // ROUTE CHAT
 router.use('/chat', require('./chat.routes'))
+
+// ROUTE QUESTIONXRESPONSE
+router.use('/questionxresponse', require('./questionxresponse.routes'))
+
+// ROUTE MESSAGES
+router.use('/message', require('./message.routes'))
 
 module.exports = router;
