@@ -10,7 +10,7 @@ const createNewQuestion = async (body, res) => {
     //     id_publicacion: 'df324tfdg3gdfg'
     // }
 
-    const { message, id_user, questionxresponse } = body
+    const { message, id_user, id_publication } = body
 
     try {
         // Creo mi nueva question para luego obtener el id de este nuevo registro
@@ -26,16 +26,22 @@ const createNewQuestion = async (body, res) => {
         })
 
         // actualizo la publication
-        // await Publication.findByIdAndUpdate(id_publication, {
-        //     id_questionxresponse: [...id_questionxresponse, newquestionxresponse._id]
-        // }, { new: true })
-
+        const publicat = await Publication.findByIdAndUpdate(
+          id_publication,
+          {
+            $push: { id_questionxresponse: newquestionxresponse._id },
+          },
+          { new: true }
+        );
         
+
+        console.log(publicat);
 
         return res.status(201).json({
             ok: true,
             msg: 'Se creo correctamente',
-            newquestionxresponse
+            newquestionxresponse,
+            publicat
         })
 
     } catch (error) {

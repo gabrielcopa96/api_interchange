@@ -3,13 +3,13 @@ const mongoose = require('mongoose');
 // const Category = mongoose.model('Categorys')
 /* Creating a new schema for the responses collection. */
 const responseSchema = new mongoose.Schema({
-    message:{
+    message: {
         type: String
     },
-    id_user:{
-        type: Schema.Types.ObjectId, ref:"Users"
+    id_user: {
+        type: Schema.Types.ObjectId, ref: "Users"
     }
 }, {
     versionKey: false
 });
-module.exports = mongoose.model('Responses',responseSchema);
+module.exports = mongoose.model('Responses', responseSchema);
