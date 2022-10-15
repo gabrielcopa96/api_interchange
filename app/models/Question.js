@@ -1,18 +1,18 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-/* Creating a new schema for the questions collection. */ 
+/* Creating a new schema for the questions collection. */
 const questionSchema = new Schema({
-    message:{
-        type:String
+    message: {
+        type: String
     },
-    id_user:{
-        type: Schema.Types.ObjectId,ref:"Users"
+    id_user: {
+        type: Schema.Types.ObjectId, ref: "Users"
     }
 }, {
     versionKey: false
 })
-module.exports = mongoose.model('Questions',questionSchema)
+module.exports = mongoose.model('Questions', questionSchema)
 
 // -> QUESTIONXRESPONSE -> QUESTION -> ID_USER -> USERNAME
 // find()

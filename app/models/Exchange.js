@@ -1,13 +1,13 @@
 const mongoose = require('mongoose')
-const Schema =mongoose.Schema;
+const Schema = mongoose.Schema;
 
 /* Creating a new schema for the chat collection. */
 const exchangeSchema = new Schema({
-    id_user:{
-      type: Schema.Types.ObjectId, ref:"Users"  
+    id_user: {
+        type: Schema.Types.ObjectId, ref: "Users"
     },
-    id_product:{
-        type: [Schema.Types.ObjectId], ref:"Products"
+    id_product: {
+        type: [Schema.Types.ObjectId], ref: "Products"
     },
     id_publication: {
         type: Schema.Types.ObjectId, ref: "Publications"
@@ -22,4 +22,4 @@ const exchangeSchema = new Schema({
     versionKey: false
 });
 
-module.exports = mongoose.model("Exchanges",exchangeSchema);
+module.exports = mongoose.model("Exchanges", exchangeSchema);

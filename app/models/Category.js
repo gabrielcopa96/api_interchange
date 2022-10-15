@@ -2,11 +2,11 @@ const mongoose = require('mongoose');
 
 /* Creating a new schema for the category model. */
 const categorySchema = new mongoose.Schema({
-    name:{
+    name: {
         required: true,
-        type:String
+        type: String
     }
 }, {
     versionKey: false
 })
-module.exports = mongoose.model('Categorys',categorySchema);
+module.exports = mongoose.model('Categorys', categorySchema);
