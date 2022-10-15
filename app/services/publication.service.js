@@ -53,8 +53,9 @@ const selectAllOrCategory = async (req, res) => {
 
         const Registration = await Publications.find({})
             .populate('id_product')
-            .populate({ path: 'id_questionxresponse', populate: { path: 'id_question' } })
-            .populate({ path: 'id_questionxresponse', populate: { path: 'id_response' } })
+            .where({
+                eliminated: false
+            })
 
         if (!Registration.length) {
             message = 'No existen registros';
@@ -111,8 +112,39 @@ const getOnePublication = async (id, res) => {
     }
 }
 
+const deletePublication= async (id,res)=>{
+    let msg = "publicacion eliminada con exito"
+    
+    try {
+        const {refernces} = await Publications.findByIdAndUpdate(id,{
+            eliminated: true
+        })
+        
+        if(refernces){
+            return res.status(200).json(
+            {
+                msg
+            }
+            )
+        }else{
+            msg="no se pudo eliminar la publicacion"
+            return res.status(200).json({
+                msg
+            })
+        }       
+    } catch (error) {
+        console.log(error)
+        return res.status(500).json({
+            msg: "surgio un error al eliminar la publicacion"
+        })
+    }
+
+    
+}
+
 module.exports = {
     registerPublication,
     selectAllOrCategory,
-    getOnePublication
+    getOnePublication,
+    deletePublication
 }
