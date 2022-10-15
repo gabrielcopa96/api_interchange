@@ -9,6 +9,8 @@ const messageSchema = new Schema({
     message: {
         type: String
     }
+}, {
+    versionKey: false
 });
 
 module.exports = mongoose.model('Messages', messageSchema);

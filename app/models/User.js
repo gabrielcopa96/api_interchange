@@ -38,5 +38,8 @@ const userSchema = new mongoose.Schema({
             message:'{VALUE} is not supported'
         }
     }
+}, {
+    versionKey: false
 })
+
 module.exports = mongoose.model('Users',userSchema);

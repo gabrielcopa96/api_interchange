@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-/* Creating a new schema for the questions collection. */
+/* Creating a new schema for the questions collection. */ 
 const questionSchema = new Schema({
     message:{
         type:String
@@ -9,6 +9,8 @@ const questionSchema = new Schema({
     id_user:{
         type: Schema.Types.ObjectId,ref:"Users"
     }
+}, {
+    versionKey: false
 })
 module.exports = mongoose.model('Questions',questionSchema)
 

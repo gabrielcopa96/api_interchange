@@ -22,5 +22,7 @@ const publicationSchema = new Schema({
     id_questionxresponse: {
         type: [Schema.Types.ObjectId], ref: "QuestionsXResponses"
     }
+}, {
+    versionKey: false
 });
 module.exports = mongoose.model("Publications", publicationSchema);

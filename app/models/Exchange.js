@@ -18,6 +18,8 @@ const exchangeSchema = new Schema({
             values: ["Pendiente", "Rechazado", "Concretado"]
         }
     }
+}, {
+    versionKey: false
 });
 
 module.exports = mongoose.model("Exchanges",exchangeSchema);
