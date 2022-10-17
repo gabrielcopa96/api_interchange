@@ -14,6 +14,7 @@ require('./app/database/connection');
 
 const app = express();
 const server = http.createServer(app)
+
 app.use(express.json())
 app.use(morgan('dev'))
 app.use(cors())
@@ -26,11 +27,6 @@ app.use(express.static(path.join(__dirname, './static')))
 app.get('/*', (req, res) => {
     res.sendFile(__dirname + '/static/error404.html')
 })
-
-
-
-
-
 
 
 server.listen(process.env.PORT || 3001, () => {
