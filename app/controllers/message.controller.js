@@ -1,8 +1,6 @@
 
 const { getOneMessage, getAllMessages, createNewMessage } = require('../services/message.service')
 
-const Messages = require('../models/Message')
-
 const getMessage = ( req, res ) => {
 
     const { id } = res.query
@@ -23,6 +21,5 @@ const createMessage = ( req, res ) => {
 module.exports = {
     getMessage,
     getMessages,
-    createMessage,
-    pruebaMessage
+    createMessage
 }
