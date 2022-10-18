@@ -5,7 +5,6 @@ const controller = require('../controllers/message.controller')
     router
         .get('/:id', controller.getMessage)
         .get('/', controller.getMessages)
-        .post('/prueba', controller.pruebaMessage)
         .post('/', controller.createMessage)
 
 module.exports = router;

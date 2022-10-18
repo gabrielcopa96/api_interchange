@@ -7,10 +7,10 @@ const exchangeSchema = new Schema({
         type: Schema.Types.ObjectId, ref: "Users"
     },
     id_product: {
-        type: [Schema.Types.ObjectId], ref: "Products"
+        type: [Schema.Types.ObjectId], ref: "Products" // -> p
     },
     id_publication: {
-        type: Schema.Types.ObjectId, ref: "Publications"
+        type: Schema.Types.ObjectId, ref: "Publications" // -> 
     },
     status: {
         type: String,

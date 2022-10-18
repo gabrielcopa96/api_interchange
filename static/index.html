@@ -1,12 +1,478 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=h1, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>HSIDVDFBRDGHBDGF</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Docs - Api Exhanges</title>
+
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,600;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>DOCUMENTACION</h1>
+    <section class="container__main">
+      <h2>CATEGORIAS</h2>
+      <div class="container__endpoint">
+        <div class="section__endpoint">
+          <h3 class="endpoint__get">GET</h3>
+          <p>/category</p>
+          <p>-> Obtiene todas las categoria existentes</p>
+        </div>
+        <div>
+          <p>Ejemplo:</p>
+          <div class="section__code__endpoint">
+            <pre><a href="https://localhost:3002/category" target="_blank" >https://localhost:3002/category</a></pre>
+            <code>
+              <p>Respuesta:</p>
+              <sub>{ _id: "ad2o3r9udsf029fjdsf", name: "Limpieza" }</sub>
+            </code>
+          </div>
+        </div>
+      </div>
+      <div class="container__endpoint">
+        <div class="section__endpoint">
+          <h3 class="endpoint__get">GET</h3>
+          <p>/category/:id</p>
+          <p>
+            -> Encuentra la categoria que corresponda al ID pasado por parametro
+          </p>
+        </div>
+        <div>
+          <p>Ejemplo:</p>
+          <div class="section__code__endpoint">
+            <pre><a href="https://localhost:3002/category" target="_blank" >https://localhost:3002/category/ad2o3r9udsf029fjdsf</a></pre>
+            <code>
+              <p>Respuesta:</p>
+              <sub>{ _id: "ad2o3r9udsf029fjdsf", name: "Limpieza" }</sub>
+            </code>
+          </div>
+        </div>
+      </div>
+      <div class="container__endpoint">
+        <div class="section__endpoint">
+          <h3 class="endpoint__post">POST</h3>
+          <p>/category</p>
+          <p>-> Agrega una nueva categoria</p>
+        </div>
+        <div>
+          <p>Ejemplo:</p>
+          <div class="section__code__endpoint">
+            <pre><a href="https://localhost:3002/category" target="_blank" >https://localhost:3002/category</a></pre>
+            <code>
+              <p>Respuesta:</p>
+              <sub>{ ok: true, msg: 'Se creo la categoria exitosamente'}</sub>
+            </code>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="container__endpoint">
+        <h3 class="endpoint__put">PUT</h3>
+        <div class="section__endpoint">
+          <p>/clientes/:id</p>
+          <p>
+            -> Actualiza el cliente que corresponda al ID pasado por parametro
+          </p>
+        </div>
+      </div> -->
+    </section>
+    <section class="container__main">
+      <h2>PRODUCTOS</h2>
+      <div class="container__endpoint">
+        <div class="section__endpoint">
+          <h3 class="endpoint__get">GET</h3>
+          <p>/product</p>
+          <p>-> Obtiene todos los productos</p>
+        </div>
+        <div>
+          <p>Ejemplo:</p>
+          <div class="section__code__endpoint">
+            <pre><a href="https://localhost:3002/category" target="_blank" >https://localhost:3002/product</a></pre>
+            <code>
+              <p>Respuesta:</p>
+              <sub>{
+                _id: "245r90e8r02348sdf" <br />
+                name: "Camiseta de Boca", <br/>
+                description: "Talle XL",  <br/>
+                img: "https://images.ole.com.ar/2022/07/01/Ye61c565-_720x0__1.jpg",  <br/>
+                id_category: "sg35gfdg34dfgdfg",  <br/>
+                id_user: "ety30tigvfdsvdf902" 
+            }</sub>
+            </code>
+          </div>
+        </div>
+      </div>
+      <div class="container__endpoint">
+        <div class="section__endpoint">
+          <h3 class="endpoint__get">GET</h3>
+          <p>/product/:id</p>
+          <p>
+            -> Encuentra el producto que corresponda al ID pasado por parametro
+          </p>
+        </div>
+        <div>
+            <p>Ejemplo:</p>
+            <div class="section__code__endpoint">
+              <pre><a href="https://localhost:3002/category" target="_blank" >https://localhost:3002/product/245r90e8r02348sdf</a></pre>
+              <code>
+                <p>Respuesta:</p>
+                <sub>{
+                  _id: "245r90e8r02348sdf" <br />
+                  name: "Camiseta de Boca", <br/>
+                  description: "Talle XL",  <br/>
+                  img: "https://images.ole.com.ar/2022/07/01/Ye61c565-_720x0__1.jpg",  <br/>
+                  id_category: "sg35gfdg34dfgdfg",  <br/>
+                  id_user: "ety30tigvfdsvdf902" 
+              }</sub>
+              </code>
+            </div>
+          </div>
+      </div>
+      <div class="container__endpoint">
+        <div class="section__endpoint">
+          <h3 class="endpoint__post">POST</h3>
+          <p>/product</p>
+          <p>
+            -> Agrega un nuevo producto, con los datos del usuario y descripcion
+          </p>
+        </div>
+        <div>
+          <p>Ejemplo:</p>
+          <div class="section__code__endpoint">
+            <pre><a href="https://localhost:3002/category" target="_blank" >https://localhost:3002/category</a></pre>
+            <code>
+              <p>Respuesta:</p>
+              <sub>{ _id: "ad2o3r9udsf029fjdsf", name: "Limpieza" }</sub>
+            </code>
+          </div>
+        </div>
+      </div>
+      <div class="container__endpoint">
+        <div class="section__endpoint">
+          <h3 class="endpoint__put">PUT</h3>
+          <p>/product/:id</p>
+          <p>
+            -> Actualiza el producto, por si el usuario se equivoco al crear el
+            producto.
+          </p>
+        </div>
+        <div>
+          <p>Ejemplo:</p>
+          <div class="section__code__endpoint">
+            <pre><a href="https://localhost:3002/category" target="_blank" >https://localhost:3002/category</a></pre>
+            <code>
+              <p>Respuesta:</p>
+              <sub>{ _id: "ad2o3r9udsf029fjdsf", name: "Limpieza" }</sub>
+            </code>
+          </div>
+        </div>
+      </div>
+      <div class="container__endpoint">
+        <div class="section__endpoint">
+          <h3 class="endpoint__delete">DELETE</h3>
+          <p>/product/:id</p>
+          <p>-> Elimina el producto por su ID</p>
+        </div>
+        <div>
+          <p>Ejemplo:</p>
+          <div class="section__code__endpoint">
+            <pre><a href="https://localhost:3002/category" target="_blank" >https://localhost:3002/category</a></pre>
+            <code>
+              <p>Respuesta:</p>
+              <sub>{ _id: "ad2o3r9udsf029fjdsf", name: "Limpieza" }</sub>
+            </code>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container__main">
+      <h2>PUBLICACIONES</h2>
+      <div class="container__endpoint">
+        <div class="section__endpoint">
+          <h3 class="endpoint__get">GET</h3>
+          <p>/publication</p>
+          <p>-> Obtiene todas las publicaciones</p>
+        </div>
+        <div>
+          <p>Ejemplo:</p>
+          <div class="section__code__endpoint">
+            <pre><a href="https://localhost:3002/category" target="_blank" >https://localhost:3002/category</a></pre>
+            <code>
+              <p>Respuesta:</p>
+              <sub>{ _id: "ad2o3r9udsf029fjdsf", name: "Limpieza" }</sub>
+            </code>
+          </div>
+        </div>
+      </div>
+      <div class="container__endpoint">
+        <div class="section__endpoint">
+          <h3 class="endpoint__get">GET</h3>
+          <p>/publication/:id</p>
+          <p>
+            -> Encuentra la publicacion que corresponda al ID pasado por
+            parametro
+          </p>
+        </div>
+        <div>
+          <p>Ejemplo:</p>
+          <div class="section__code__endpoint">
+            <pre><a href="https://localhost:3002/category" target="_blank" >https://localhost:3002/category</a></pre>
+            <code>
+              <p>Respuesta:</p>
+              <sub>{ _id: "ad2o3r9udsf029fjdsf", name: "Limpieza" }</sub>
+            </code>
+          </div>
+        </div>
+      </div>
+      <div class="container__endpoint">
+        <div class="section__endpoint">
+          <h3 class="endpoint__put">PUT</h3>
+          <p>/publication/:id?status=status</p>
+          <p>-> Actualiza el estado de la publicacion</p>
+        </div>
+        <div>
+          <p>Ejemplo:</p>
+          <div class="section__code__endpoint">
+            <pre><a href="https://localhost:3002/category" target="_blank" >https://localhost:3002/category</a></pre>
+            <code>
+              <p>Respuesta:</p>
+              <sub>{ _id: "ad2o3r9udsf029fjdsf", name: "Limpieza" }</sub>
+            </code>
+          </div>
+        </div>
+      </div>
+      <div class="container__endpoint">
+        <div class="section__endpoint">
+          <h3 class="endpoint__delete">DELETE</h3>
+          <p>/publication/:id/?eliminated=true</p>
+          <p>-> Actualiza la publicacion a un eliminado en true</p>
+        </div>
+        <div>
+          <p>Ejemplo:</p>
+          <div class="section__code__endpoint">
+            <pre><a href="https://localhost:3002/category" target="_blank" >https://localhost:3002/category</a></pre>
+            <code>
+              <p>Respuesta:</p>
+              <sub>{ _id: "ad2o3r9udsf029fjdsf", name: "Limpieza" }</sub>
+            </code>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container__main">
+      <h2>CHAT</h2>
+      <div class="container__endpoint">
+        <div class="section__endpoint">
+          <h3 class="endpoint__get">GET</h3>
+          <p>/chat/:id</p>
+          <p>-> Obtiene el chat que corresponda al id pasado por parametro</p>
+        </div>
+        <div>
+          <p>Ejemplo:</p>
+          <div class="section__code__endpoint">
+            <pre><a href="https://localhost:3002/category" target="_blank" >https://localhost:3002/category</a></pre>
+            <code>
+              <p>Respuesta:</p>
+              <sub>{ _id: "ad2o3r9udsf029fjdsf", name: "Limpieza" }</sub>
+            </code>
+          </div>
+        </div>
+      </div>
+      <div class="container__endpoint">
+        <div class="section__endpoint">
+          <h3 class="endpoint__get">GET</h3>
+          <p>/chat/:id_user</p>
+          <p>
+            -> Obtiene todos los chat del usuario, segun el id_user pasado por
+            parametro
+          </p>
+        </div>
+        <div>
+          <p>Ejemplo:</p>
+          <div class="section__code__endpoint">
+            <pre><a href="https://localhost:3002/category" target="_blank" >https://localhost:3002/category</a></pre>
+            <code>
+              <p>Respuesta:</p>
+              <sub>{ _id: "ad2o3r9udsf029fjdsf", name: "Limpieza" }</sub>
+            </code>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container__main">
+      <h2>MENSAJES</h2>
+      <div class="container__endpoint">
+        <div class="section__endpoint">
+          <h3 class="endpoint__get">GET</h3>
+          <p>/message</p>
+          <p>-> Obtiene todos los mensajes</p>
+        </div>
+        <div>
+          <p>Ejemplo:</p>
+          <div class="section__code__endpoint">
+            <pre><a href="https://localhost:3002/category" target="_blank" >https://localhost:3002/category</a></pre>
+            <code>
+              <p>Respuesta:</p>
+              <sub>{ _id: "ad2o3r9udsf029fjdsf", name: "Limpieza" }</sub>
+            </code>
+          </div>
+        </div>
+      </div>
+      <div class="container__endpoint">
+        <div class="section__endpoint">
+          <h3 class="endpoint__get">GET</h3>
+          <p>/message/:id</p>
+          <p>-> Obtiene el mensaje segun el ID pasado por parametro</p>
+        </div>
+        <div>
+          <p>Ejemplo:</p>
+          <div class="section__code__endpoint">
+            <pre><a href="https://localhost:3002/category" target="_blank" >https://localhost:3002/category</a></pre>
+            <code>
+              <p>Respuesta:</p>
+              <sub>{ _id: "ad2o3r9udsf029fjdsf", name: "Limpieza" }</sub>
+            </code>
+          </div>
+        </div>
+      </div>
+      <div class="container__endpoint">
+        <div class="section__endpoint">
+          <h3 class="endpoint__post">POST</h3>
+          <p>/message</p>
+          <p>
+            -> Agrega un nuevo mensaje, a un chat existente, si no existe el
+            chat lo crea
+          </p>
+        </div>
+        <div>
+          <p>Ejemplo:</p>
+          <div class="section__code__endpoint">
+            <pre><a href="https://localhost:3002/category" target="_blank" >https://localhost:3002/category</a></pre>
+            <code>
+              <p>Respuesta:</p>
+              <sub>{ _id: "ad2o3r9udsf029fjdsf", name: "Limpieza" }</sub>
+            </code>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container__main">
+      <h2>PREGUNTAS Y RESPUESTAS</h2>
+      <div class="container__endpoint">
+        <div class="section__endpoint">
+          <h3 class="endpoint__get">GET</h3>
+          <p>/question</p>
+          <p>-> Obtiene todas las preguntas</p>
+        </div>
+        <div>
+          <p>Ejemplo:</p>
+          <div class="section__code__endpoint">
+            <pre><a href="https://localhost:3002/category" target="_blank" >https://localhost:3002/category</a></pre>
+            <code>
+              <p>Respuesta:</p>
+              <sub>{ _id: "ad2o3r9udsf029fjdsf", name: "Limpieza" }</sub>
+            </code>
+          </div>
+        </div>
+      </div>
+      <div class="container__endpoint">
+        <div class="section__endpoint">
+          <h3 class="endpoint__get">GET</h3>
+          <p>/question/:id</p>
+          <p>-> Obtiene la pregunta segun el ID pasado por parametro</p>
+        </div>
+        <div>
+          <p>Ejemplo:</p>
+          <div class="section__code__endpoint">
+            <pre><a href="https://localhost:3002/category" target="_blank" >https://localhost:3002/category</a></pre>
+            <code>
+              <p>Respuesta:</p>
+              <sub>{ _id: "ad2o3r9udsf029fjdsf", name: "Limpieza" }</sub>
+            </code>
+          </div>
+        </div>
+      </div>
+      <div class="container__endpoint">
+        <div class="section__endpoint">
+          <h3 class="endpoint__post">POST</h3>
+          <p>/question</p>
+          <p>
+            -> Agrega una nueva pregunta y crea el bloque para relacionar la
+            respuesta
+          </p>
+        </div>
+        <div>
+          <p>Ejemplo:</p>
+          <div class="section__code__endpoint">
+            <pre><a href="https://localhost:3002/category" target="_blank" >https://localhost:3002/category</a></pre>
+            <code>
+              <p>Respuesta:</p>
+              <sub>{ _id: "ad2o3r9udsf029fjdsf", name: "Limpieza" }</sub>
+            </code>
+          </div>
+        </div>
+      </div>
+      <div class="container__endpoint">
+        <div class="section__endpoint">
+          <h3 class="endpoint__get">GET</h3>
+          <p>/response</p>
+          <p>-> Obtiene todas las respuestas</p>
+        </div>
+        <div>
+          <p>Ejemplo:</p>
+          <div class="section__code__endpoint">
+            <pre><a href="https://localhost:3002/category" target="_blank" >https://localhost:3002/category</a></pre>
+            <code>
+              <p>Respuesta:</p>
+              <sub>{ _id: "ad2o3r9udsf029fjdsf", name: "Limpieza" }</sub>
+            </code>
+          </div>
+        </div>
+      </div>
+      <div class="container__endpoint">
+        <div class="section__endpoint">
+          <h3 class="endpoint__get">GET</h3>
+          <p>/response/:id</p>
+          <p>
+            -> Obtiene todas las respuestas segun el ID pasado por parametro
+          </p>
+        </div>
+        <div>
+          <p>Ejemplo:</p>
+          <div class="section__code__endpoint">
+            <pre><a href="https://localhost:3002/category" target="_blank" >https://localhost:3002/category</a></pre>
+            <code>
+              <p>Respuesta:</p>
+              <sub>{ _id: "ad2o3r9udsf029fjdsf", name: "Limpieza" }</sub>
+            </code>
+          </div>
+        </div>
+      </div>
+      <div class="container__endpoint">
+        <div class="section__endpoint">
+          <h3 class="endpoint__post">POST</h3>
+          <p>/response</p>
+          <p>
+            -> Agrega una nueva respuesta y la asocia al bloque para relacionar
+            la pregunta con esta nueva respuesta
+          </p>
+        </div>
+        <div>
+          <p>Ejemplo:</p>
+          <div class="section__code__endpoint">
+            <pre><a href="https://localhost:3002/category" target="_blank" >https://localhost:3002/category</a></pre>
+            <code>
+              <p>Respuesta:</p>
+              <sub>{ _id: "ad2o3r9udsf029fjdsf", name: "Limpieza" }</sub>
+            </code>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>

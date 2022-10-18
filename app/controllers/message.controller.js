@@ -20,23 +20,6 @@ const createMessage = ( req, res ) => {
     return createNewMessage( req.body, res )
 }
 
-const pruebaMessage = async (req, res) => {
-
-    const data = req.body
-
-    const newMessage = await Messages.create({
-        message: data.message,
-        id_user: data.id_user,
-    })
-
-    console.log('esta es mi nueva data', newMessage)
-
-    res.json({
-        msg: 'Se pudo',
-        newMessage
-    })
-}
-
 module.exports = {
     getMessage,
     getMessages,

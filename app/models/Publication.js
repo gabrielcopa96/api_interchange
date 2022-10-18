@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 /* Creating a schema for the publications collection. */
 const publicationSchema = new Schema({
 
-    refernces: {//search the type of refernces for the camp refernce
+    references: {//search the type of refernces for the camp refernce
         type: String
     },
     state: {

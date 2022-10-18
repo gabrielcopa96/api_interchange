@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+  }
+  
+  .container__endpoint {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.3rem;
+    margin: 0.6rem auto;
+    border-top: 1px solid #747474;
+    border-bottom: 1px solid #747474;
+    gap: 1rem;
+  }
+  
+  .aviso {
+    color: #ff4e50;
+  }
+  
+  .section__endpoint {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  
+  .section__endpoint p {
+    font-weight: 600;
+  }
+  
+  .container__main {
+    width: 85%;
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .endpoint__get {
+    background-color: #6cbdb5;
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+  }
+  
+  .endpoint__post {
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background-color: #59a87d;
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+  
+  .endpoint__put {
+    background-color: #ede574;
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+  }
+  
+  .endpoint__delete {
+    background-color: #ff4e50;
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+  }
+  
+  .section__code__endpoint {
+    background-color: #2d2a55;
+    border-radius: 1rem;
+    padding: 2rem;
+  }
+  
+  .section__code__endpoint a {
+    color:#53f19a;
+  }
+  
+  .section__code__endpoint p {
+    margin-top: .65rem;
+    color: #fff;
+  }
+  
+  .section__code__endpoint code {
+    color: #b35ad3;
+  }

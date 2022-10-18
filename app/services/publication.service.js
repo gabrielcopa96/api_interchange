@@ -143,7 +143,7 @@ const deletePublication= async (id,res)=>{
 }
 
 module.exports = {
-    registerPublication,
+    registerPublication, // newPublication
     selectAllOrCategory,
     getOnePublication,
     deletePublication

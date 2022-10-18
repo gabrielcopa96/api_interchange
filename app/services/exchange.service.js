@@ -11,6 +11,13 @@ const newExchange = async (body, res) => {
     //     status: 'Pendiente',
     // }
 
+    // const a = {
+    //     id_publication: '634a28d55946a41968fa8819',
+    //     id_user: '63470912daec01043771f980',
+    //     id_product: '6348809b9e9a000959676bdb',
+    //     status: 'Pendiente'
+    // }
+
     try {
         
         const exchange = await Exchanges.create(body)
@@ -52,11 +59,26 @@ const newExchange = async (body, res) => {
 const getAllExchanges = async (res) => {
 
     try {
+
+        // const [isChange, setIsChange]= useState(false);
+        
+        // useEffect(() => {
+            
+        //     isChange(true) 
+
+        //     if(isChange) {
+                
+
+        //         isChange(false);
+        //     }
+
+        // }, [notify])
         
         const exchanges = await Exchanges.find()
             .populate('id_user', 'username')
-            .populate({ path: 'id_publication', populate: { path: 'id_product', select: 'name description'}}) 
-            .populate({ path: 'id_publication', populate: { path: 'id_product', populate: { path: 'id_user', select: 'username'}}})
+            .populate({ path: 'id_publication', populate: { path: 'id_product', select: 'name description' }}) 
+            .populate({ path: 'id_publication', populate: { path: 'id_user', select: 'username' }})
+            .populate({ path: 'id_product', select: 'name description' })
             
         if(exchanges.length) {
             return res.status(200).json({
