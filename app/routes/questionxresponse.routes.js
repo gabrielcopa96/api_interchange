@@ -1,9 +1,10 @@
 const router = require('express').Router()
 
 const controller = require('../controllers/questionxresponse.controller');
+const { checkJwt } = require('../middleware/session')
 
  router
-     .get('/', controller.getQuestionsXResponses)
-     .get('/:id', controller.getQuestionResponse)
+     .get('/', checkJwt, controller.getQuestionsXResponses)
+     .get('/:id', checkJwt, controller.getQuestionResponse)
 
 module.exports = router
